@@ -1,0 +1,58 @@
+entity Panel {
+	palenBrand String,
+    panelModel String,
+    panelSize String,
+    panelPrice Double
+}
+
+entity Clients {
+	created LocalDate,
+    firstName String,
+    lastName String,
+    designation Designation,
+    nicNumber String,
+    tel String 
+    
+}
+
+entity ClientAddress {
+	clientId String,
+	address String,
+	city String,
+	postalCode Integer
+}
+
+entity Inverters {
+	inverterBrand String,
+    inverterModel String,
+    inverterSize Double,
+    inverterPrice Double  
+}
+
+
+entity Quotation {
+	clientId String,
+	addressId String,
+    created LocalDate,
+    systemSize Double,
+    unitUsage String,
+    unitsGenerates Double,
+    panelBrand String,
+    panelModel String,
+    numberofPanels Double,
+    panelCapacity Double,
+    inverterBrand String,
+    inverterModel String,
+    inverterCapacity Double,
+    areaNeeded Double,
+    mountingStructure String,
+    constructionPrice String,
+    profit String,
+    commission String,
+    systemPrice Double
+}
+
+enum Designation {
+    Ms, Mr, Miss, Dr, Rev
+}
+
